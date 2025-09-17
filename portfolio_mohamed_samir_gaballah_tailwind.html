@@ -3,28 +3,32 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mohamed Samir Gaballah — Portfolio</title>
-  <meta name="description" content="Mohamed Samir Gaballah — Full-Stack .NET Developer & Data Science student" />
+  <title>Mohamed Samir Abdallah — Portfolio</title>
+  <meta name="description" content="Mohamed Samir Abdallah — Full-Stack .NET Developer & Data Science student" />
   <!-- Tailwind Play CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet"> <!-- for Gmail icon -->
   <style>
     .card-shadow { box-shadow: 0 6px 18px rgba(0,0,0,0.6); }
+    .project-card:hover .project-desc { opacity: 1; }
+    .project-desc { opacity: 0; transition: opacity 0.3s; }
   </style>
 </head>
 <body class="bg-gray-900 text-gray-200 antialiased leading-relaxed">
   <header class="bg-gray-800 border-b border-gray-700">
     <div class="container mx-auto px-6 md:px-12 lg:px-20 py-6 flex items-center justify-between">
       <div>
-        <a href="#" class="text-2xl font-semibold text-white">Mohamed Samir Gaballah</a>
+        <a href="#" class="text-2xl font-semibold text-white">Mohamed Samir Abdallah</a>
         <p class="text-sm text-gray-400">Full-Stack .NET Developer • Data Science Student</p>
       </div>
       <nav class="space-x-4 hidden md:block">
         <a href="#about" class="hover:text-cyan-400">About</a>
+        <a href="#education" class="hover:text-cyan-400">Education</a>
         <a href="#skills" class="hover:text-cyan-400">Skills</a>
         <a href="#projects" class="hover:text-cyan-400">Projects</a>
         <a href="#contact" class="hover:text-cyan-400">Contact</a>
-        <a href="myCV.pdf" target="_blank" class="hover:text-cyan-400">CV</a>
+        <a href="Mohamed_Samir_CV.pdf" target="_blank" class="hover:text-cyan-400">CV</a>
       </nav>
       <div class="md:hidden">
         <button id="mobileBtn" class="px-3 py-2 border rounded">Menu</button>
@@ -33,30 +37,40 @@
     <div id="mobileNav" class="hidden border-t border-gray-700 bg-gray-800">
       <div class="px-6 py-4 space-y-2">
         <a href="#about" class="block">About</a>
+        <a href="#education" class="block">Education</a>
         <a href="#skills" class="block">Skills</a>
         <a href="#projects" class="block">Projects</a>
         <a href="#contact" class="block">Contact</a>
-        <a href="myCV.pdf" target="_blank" class="block">CV</a>
+        <a href="Mohamed_Samir_CV.pdf" target="_blank" class="block">CV</a>
       </div>
     </div>
   </header>
 
   <main class="container mx-auto px-6 md:px-12 lg:px-20 py-12">
-    <!-- Hero / About -->
+    <!-- About -->
     <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
       <div class="md:col-span-2">
-        <h1 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Hi — I'm <span id="heroName">Mohamed Samir Gaballah</span></h1>
-        <p id="aboutText" class="text-gray-300 mb-4"></p>
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          Hi — I'm <span id="heroName">Mohamed Samir Abdallah</span>
+        </h1>
+        <div id="aboutText" class="space-y-4 text-gray-300 mb-4"></div>
         <div class="flex flex-wrap gap-3">
           <a href="#projects" class="inline-block px-4 py-2 bg-cyan-600 text-white rounded shadow hover:bg-cyan-500">See Projects</a>
           <a href="#contact" class="inline-block px-4 py-2 border border-cyan-600 rounded hover:bg-cyan-600 hover:text-white">Contact me</a>
-          <a href="myCV.pdf" target="_blank" class="inline-block px-4 py-2 bg-purple-600 text-white rounded shadow hover:bg-purple-500">Download CV</a>
         </div>
       </div>
       <div class="flex justify-center md:justify-end">
-        <div class="w-48 h-64 rounded-lg overflow-hidden card-shadow">
-          <img src="1757285078634.jpg" alt="Mohamed Samir Gaballah" class="w-full h-full object-cover">
+        <div class="w-56 h-72 rounded-lg overflow-hidden card-shadow">
+          <img src="images/Picsart_25-09-08_00-19-39-407.jpg" alt="Mohamed Samir Abdallah" class="w-full h-full object-cover">
         </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="mt-12">
+      <h2 class="text-2xl font-semibold mb-4 bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">Education</h2>
+      <div class="bg-gray-800 p-6 rounded-lg card-shadow">
+        <p>🏛️ Faculty of Computers & Data Science – Alexandria University (Graduation Year: May 2027)</p>
       </div>
     </section>
 
@@ -96,7 +110,7 @@
         </div>
       </div>
       <div class="mt-4 bg-gray-800 p-6 rounded-lg card-shadow">
-        <h3 class="font-medium mb-2">Concepts</h3>
+        <h3 class="font-medium mb-2">Technical Concepts</h3>
         <p id="skillConcepts" class="text-sm text-gray-400"></p>
       </div>
     </section>
@@ -104,50 +118,88 @@
     <!-- Projects -->
     <section id="projects" class="mt-12">
       <h2 class="text-2xl font-semibold mb-4 bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent">Projects</h2>
-      <p class="text-sm text-gray-400 mb-4">Click a project title to open the GitHub repo (if available).</p>
+      <p class="text-sm text-gray-400 mb-4">Hover to see description • Click to open GitHub repo</p>
       <div id="projectsGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="mt-12">
       <h2 class="text-2xl font-semibold mb-4 bg-gradient-to-r from-green-400 to-cyan-500 bg-clip-text text-transparent">Contact</h2>
-      <div class="flex gap-6 text-4xl">
-        <a id="contactEmail" href="mailto:mohamed.samir.g10@gmail.com" class="hover:text-cyan-400"><i class="devicon-google-plain"></i></a>
-        <a id="contactLinkedIn" href="https://www.linkedin.com/in/mohamed-samir-8b5a13309" target="_blank" class="hover:text-cyan-400"><i class="devicon-linkedin-plain"></i></a>
-        <a id="contactGitHub" href="https://github.com/Mo-Samir10" target="_blank" class="hover:text-cyan-400"><i class="devicon-github-original"></i></a>
+      <div class="flex gap-12 text-6xl">
+        <div class="flex flex-col items-center">
+          <a id="contactEmail" href="mailto:mohamed.samir.g10@gmail.com" class="hover:text-cyan-400">
+            <i class="ri-mail-fill"></i>
+          </a>
+          <span class="text-sm mt-2">Gmail</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <a id="contactLinkedIn" href="https://www.linkedin.com/in/mohamed-samir-8b5a13309" target="_blank" class="hover:text-cyan-400">
+            <i class="devicon-linkedin-plain"></i>
+          </a>
+          <span class="text-sm mt-2">LinkedIn</span>
+        </div>
+        <div class="flex flex-col items-center">
+          <a id="contactGitHub" href="https://github.com/Mo-Samir10" target="_blank" class="hover:text-cyan-400">
+            <i class="devicon-github-original"></i>
+          </a>
+          <span class="text-sm mt-2">GitHub</span>
+        </div>
       </div>
     </section>
 
     <footer class="mt-12 text-center text-sm text-gray-500">
-      © <span id="footerYear"></span> Mohamed Samir Gaballah — Built with TailwindCSS
+      © <span id="footerYear"></span> Built with love by Mohamed Samir Abdallah ♥️
     </footer>
   </main>
 
   <script>
     const DATA = {
-      about: `Hi — I'm Mohamed Samir Gaballah, a Full-Stack .NET Developer and third-year Data Science student at the Faculty of Computers and Data Science. I completed an IT Specialist internship at EgyTrans in July 2024 and an IoT summer training internship at my faculty in July 2025. I'm currently enrolled in a six-month Full Stack .NET Development internship with the Digital Egypt Pioneers Initiative (DEPI). I serve as Head of the Organizing Committee at the HackerRank FCDS Campus Club, where I organize technical events, workshops, and soft-skills sessions for members.`,
-      concepts: ['Object-Oriented Programming (OOP)', 'Data Structures', 'Algorithms', 'Operating Systems', 'Networking basics', 'Data Science'],
+      about: [
+        "Hi — I’m Mohamed Samir Abdallah, a passionate Full-Stack .NET Developer skilled in building scalable web applications with C#, ASP.NET Core, SQL Server, and modern front-end technologies. I have a strong foundation in database design, problem-solving, and delivering reliable software solutions.",
+        "I’m currently a third-year Data Science student at the Faculty of Computers and Data Science. My journey includes an IT Specialist internship at EgyTrans (2024) and an IoT summer training internship (2025). Right now, I’m sharpening my skills through a six-month Full Stack .NET Development internship with the Digital Egypt Pioneers Initiative (DEPI).",
+        "Beyond development, I contribute as Head of the Organizing Committee at HackerRank FCDS Campus Club, where I lead technical events, workshops, and soft-skills sessions to empower fellow students."
+      ],
+      concepts: ['Object-Oriented Programming (OOP)', 'Data Structures', 'Algorithms', 'Database Design', 'Data Science Basics'],
       projects: [
-        { title: 'University Course Enrollment & Management System DB USING T-SQL', url: '#' },
-        { title: 'HOSPITAL DB USING T-SQL', url: '#' },
-        { title: 'File-sharing web application ON AWS', url: '#' },
-        { title: 'E-COMMERCE SYSTEM IN JAVA WITH OOP PRINCIPALS', url: '#' },
-        { title: 'Smart Road IOT System (ESP32) WITH CONTROL THROUGH MQTT PROTOCOL AND A WEBSITE (REACT)', url: '#' },
-        { title: 'ANALYSIS OF HUGE MARKET DATASET USING PANDAS AND NUMPY', url: '#' },
-        { title: 'APPLYING ML CONCEPTS ON DATASETS (SIMPLE-MULTIPLE-LOGISTIC REGRESSION - AND DEEP LEARNING) USING sklearn AND TENSORFLOW', url: '#' }
+        { title: 'Smart Road IOT System (ESP32) WITH CONTROL THROUGH MQTT PROTOCOL AND A WEBSITE (REACT)', url: 'https://github.com/Mo-Samir10/IOT_SmartRoadSystem', image: 'images/iot.png', desc: 'IoT project using ESP32 and MQTT protocol, integrated with a React dashboard.' },
+        { title: 'E-COMMERCE SYSTEM IN JAVA WITH OOP PRINCIPALS', url: 'https://github.com/Mo-Samir10/E-Commerce-System', image: 'images/comm.png', desc: 'A Java OOP-based e-commerce backend system with cart and checkout features.' }, 
+        { title: 'File-sharing web application ON AWS', url: 'https://github.com/Mo-Samir10/File-sharing-web-app-on-AWS', image: 'images/aws.png', desc: 'A file-sharing app deployed using AWS cloud services.' },
+        { title: 'University Course Enrollment & Management System DB USING T-SQL', url: 'https://github.com/Mo-Samir10/University-DB-Project', image: 'images/uni.png', desc: 'A T-SQL database project for managing course enrollments and university data.' },
+        { title: 'APPLYING ML CONCEPTS ON DATASETS (SIMPLE-MULTIPLE-LOGISTIC REGRESSION - AND DEEP LEARNING) USING sklearn AND TENSORFLOW', url: 'https://github.com/Mo-Samir10/Machine-Learning-Algorithms', image: 'images/ml.png', desc: 'Machine learning experiments with regression models and deep learning.' },
+        { title: 'HOSPITAL DB USING T-SQL', url: 'https://github.com/Mo-Samir10/Hospital-DataBase', image: 'images/hospital.jpg', desc: 'A SQL Server database system to manage hospital patients, doctors, and treatments.' },
+        { title: 'ANALYSIS OF HUGE MARKET DATASET USING PANDAS AND NUMPY', url: 'https://github.com/Mo-Samir10/Huge-Market-Analysis', image: 'images/market.png', desc: 'Data analysis on a huge market dataset using Pandas and NumPy.' }
+        
       ]
     };
 
-    document.getElementById('aboutText').textContent = DATA.about;
+    // About section with spacing
+    const aboutDiv = document.getElementById('aboutText');
+    DATA.about.forEach(p => {
+      const para = document.createElement('p');
+      para.textContent = p;
+      aboutDiv.appendChild(para);
+    });
+
+    // Skills
     document.getElementById('skillConcepts').textContent = DATA.concepts.join(' • ');
 
+    // Projects with images + hover description
     const projectsGrid = document.getElementById('projectsGrid');
     DATA.projects.forEach(proj => {
       const a = document.createElement('a');
-      a.className = 'block bg-gray-800 p-4 rounded-lg card-shadow hover:translate-y-[-4px] transition-transform';
+      a.className = 'relative block bg-gray-800 rounded-lg card-shadow overflow-hidden hover:translate-y-[-4px] transition-transform';
       a.href = proj.url && proj.url !== '#' ? proj.url : '#';
       a.target = '_blank';
-      a.innerHTML = `<h4 class="font-medium mb-1">${proj.title}</h4><p class="text-xs text-gray-400">${proj.url && proj.url !== '#' ? 'View on GitHub' : 'Coming soon'}</p>`;
+      a.innerHTML = `
+        <img src="${proj.image}" alt="${proj.title}" class="w-full h-40 object-cover">
+        <div class="p-4">
+          <h4 class="font-medium mb-1">${proj.title}</h4>
+          <p class="text-xs text-gray-400">${proj.url && proj.url !== '#' ? 'View on GitHub' : 'Coming soon'}</p>
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center text-center p-4 project-desc">
+          <p class="text-sm text-gray-200">${proj.desc}</p>
+        </div>
+      `;
       if (!proj.url || proj.url === '#') {
         a.classList.add('opacity-80');
         a.addEventListener('click', (e) => { e.preventDefault(); alert('This project repo is not published to GitHub yet.'); });
@@ -155,7 +207,10 @@
       projectsGrid.appendChild(a);
     });
 
+    // Footer year
     document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
     document.getElementById('mobileBtn').addEventListener('click', () => {
       const nav = document.getElementById('mobileNav');
       nav.classList.toggle('hidden');
